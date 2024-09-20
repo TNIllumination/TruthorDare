@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/background_image">
+
+    <!-- Hintergrundbild -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/background_image"
+        android:src="@drawable/background_image"
+        android:alpha="0.7" /> <!-- Leichte Transparenz, um Buttons hervorzuheben -->
+
+    <!-- Beenden-Button oben rechts -->
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:alpha="0.9"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#40D32F2F"
+        android:padding="12dp"
+        android:text="Beenden"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <!-- Bibliotheksauswahl-Layout -->
+
+    <!-- Wahrheit oder Pflicht Layout -->
+    <LinearLayout
+        android:id="@+id/layout_library_selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_exit"
+        android:layout_marginTop="275dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <!-- Button zur Auswahl der ersten Bibliothek -->
+        <Button
+            android:id="@+id/btn_good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="#8F2615"
+            android:padding="12dp"
+            android:text="lernt euch kennen"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <!-- Button zur Auswahl der zweiten Bibliothek -->
+        <Button
+            android:id="@+id/btn_very_good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:backgroundTint="#470805"
+            android:padding="12dp"
+            android:text="Ihr kennt euch inkl. Intim"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Zurück-Button -->
+    <LinearLayout
+        android:id="@+id/layout_truth_or_dare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_exit"
+        android:layout_marginTop="245dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!-- TextView zur Anzeige der Aufgabe -->
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:padding="16dp"
+            android:text="Wahrheit oder Pflicht"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <!-- Button für Wahrheit -->
+
+        <!-- Button für Pflicht -->
+        <Button
+            android:id="@+id/btn_truth"
+            android:layout_width="257dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="#B27A1406"
+            android:padding="16dp"
+            android:text="Warheit"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_dare"
+            android:layout_width="257dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:backgroundTint="#9AF9C9A2"
+            android:padding="16dp"
+            android:text="Pflicht"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#5CD5411E"
+        android:padding="12dp"
+        android:text="Zurück"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_donate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#E6421313"
+        android:onClick="onDonateClick"
+        android:text="Spenden"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
+
